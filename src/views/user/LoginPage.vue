@@ -1,30 +1,40 @@
 <template>
-        <div class="d-flex justify-center">
+    <div class="mx-auto" style="width: 935px; height: 736px;">
+        <v-card class="mx-auto"
+                width="350"
+                height="382"
+                outlined>
             <form @submit.prevent="onSubmit">
-                <div>
-                    아이디
-                    <input type="text" v-model="writer"/>
+                <br/>
+                <h1 class="d-flex justify-center">Vuestagram</h1>
+                <br/>
+                <div class="d-flex justify-center">
+                    <input style="border: 1px solid gray" type="text" placeholder="아이디" v-model="writer"/>
                 </div>
-                <div>
-                    비밀번호
-                    <input type="text" v-model="writer"/>
+                <div class="d-flex justify-center">
+                    <input style="border: 1px solid gray" type="text" placeholder="비밀번호" v-model="writer"/>
                 </div>
-                <div>
-                    이름
-                    <input type="text" v-model="title"/>
-                </div>
-                <div align="start">
-                    <div><v-btn color="blue" class="white--text" type="submit">로그인</v-btn></div>
-                    <button class="blue--text" type="button">비밀번호 찾기</button>
-                    <div>
-                        <router-link style="text-decoration: none;" :to="{name: 'RegisterPage'}">
-                        <v-btn color="blue" class="white--text">회원가입</v-btn>
-                        </router-link>
-                    </div>
-                </div>
+                <br/>
+                <div class="d-flex justify-center"><v-btn color="blue" class="white--text" type="submit">로그인</v-btn></div>
             </form>
-        </div>
-
+            <br/>
+            <div class="d-flex justify-center">또는</div>
+            <br/>
+            <div class="d-flex justify-center"><button class="indigo--text" type="button">비밀번호를 잊으셨나요?</button></div>
+        </v-card>
+        <br/>
+        <v-card class="mx-auto"
+                width="350"
+                height="63"
+                outlined>
+            <div align="center">
+                계정이 없으신가요?
+                <router-link style="text-decoration: none;" :to="{name: 'RegisterPage'}">
+                <button class="blue--text" type="button">&nbsp;가입하기</button>
+                </router-link>
+            </div>
+        </v-card>
+    </div>        
 </template>
 
 <script>
@@ -34,3 +44,12 @@ export default {
     },
 }
 </script>
+
+<style>
+
+.v-main {
+    background-color: #f5f5f5;
+
+}
+
+</style>
